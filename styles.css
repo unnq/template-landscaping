@@ -87,12 +87,19 @@ a:hover{ text-decoration: underline; }
 .section__head p{ color: var(--muted); margin: .25rem 0 0; }
 
 .card{
-  background: var(--surface);
+  background: #fff;
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
   padding: 1rem;
-  border: 1px solid #eee;
+  border: 1px solid #e8ece8;
+  position: relative;
 }
+.card::before{
+  /* tasteful 2px top stripe in secondary */
+  content:""; position:absolute; left:0; right:0; top:0; height:2px;
+  background: var(--secondary); border-top-left-radius: var(--radius); border-top-right-radius: var(--radius);
+}
+
 
 .btn{
   display:inline-flex; align-items:center; justify-content:center;
