@@ -499,32 +499,105 @@
 </section>
 
 
-    <!-- Reviews -->
-    <section id="reviews" class="section">
-      <div class="container">
-        <header class="section__head">
-          <h2>What Neighbors Say</h2>
-        </header>
+    <!-- REVIEWS -->
+<section id="reviews" class="section reviews reviews--v2">
+  <div class="container">
+    <header class="reviews__head">
+      <span class="reviews__kicker">Neighbors Love Us</span>
+      <h2 class="reviews__title">What {{CITY}} Homeowners Say</h2>
+      <p class="reviews__sub">Consistent results, clear communication, and reliable scheduling—every visit.</p>
 
-        <div class="grid reviews__grid">
-          <article class="card review">
-            <div class="stars" aria-label="5 stars">★★★★★</div>
-            <p>“They show up on schedule and my yard has never looked better.”</p>
-            <p class="review__name">— Jamie R.</p>
-          </article>
-          <article class="card review">
-            <div class="stars" aria-label="5 stars">★★★★★</div>
-            <p>“Clean edges, great communication, and fair recommendations.”</p>
-            <p class="review__name">— Luis P.</p>
-          </article>
-          <article class="card review">
-            <div class="stars" aria-label="5 stars">★★★★★</div>
-            <p>“Our before/after was unreal. Totally worth it.”</p>
-            <p class="review__name">— Priya K.</p>
-          </article>
+      <!-- Meta rating strip -->
+      <div class="reviews__meta" aria-label="Overall rating">
+        <div class="stars" aria-hidden="true">
+          <!-- 5 solid stars -->
+          <svg viewBox="0 0 24 24" width="18" height="18" class="star"><path d="M12 2l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 15.9 6.8 18l1-5.8-4.2-4.1 5.8-.8L12 2z" fill="currentColor"/></svg>
+          <svg viewBox="0 0 24 24" width="18" height="18" class="star"><path d="M12 2l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 15.9 6.8 18l1-5.8-4.2-4.1 5.8-.8L12 2z" fill="currentColor"/></svg>
+          <svg viewBox="0 0 24 24" width="18" height="18" class="star"><path d="M12 2l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 15.9 6.8 18l1-5.8-4.2-4.1 5.8-.8L12 2z" fill="currentColor"/></svg>
+          <svg viewBox="0 0 24 24" width="18" height="18" class="star"><path d="M12 2l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 15.9 6.8 18l1-5.8-4.2-4.1 5.8-.8L12 2z" fill="currentColor"/></svg>
+          <svg viewBox="0 0 24 24" width="18" height="18" class="star"><path d="M12 2l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 15.9 6.8 18l1-5.8-4.2-4.1 5.8-.8L12 2z" fill="currentColor"/></svg>
         </div>
+        <strong class="reviews__score">5.0</strong>
+        <span class="reviews__count">• 120+ local reviews</span>
+        <span class="reviews__verified">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2l2.4 1.8 3 0 1.2 2.8 2 2-.8 3.1L21 14l-.2 3.1-2.8 1.3L15 20l-3 2-3-2-3-.6L2.9 17 2.7 14l1.2-2.3L3 8.6 5 6.8 6.2 4 9.2 3.8 12 2zm-1 13.2l5.6-5.6-1.4-1.4-4.2 4.2-2.2-2.2L7.4 11l3.6 3.6z"/></svg>
+          Verified
+        </span>
       </div>
-    </section>
+    </header>
+
+    <div class="reviews__grid">
+      <!-- Review 1 -->
+      <article class="tcard">
+        <div class="tcard__head">
+          <div class="avatar" aria-hidden="true">JR</div>
+          <div class="tmeta">
+            <h3 class="tname">Jamie R.</h3>
+            <p class="twhere">{{CITY}}</p>
+          </div>
+          <div class="tstars" aria-label="5 stars">
+            <span>★★★★★</span>
+          </div>
+        </div>
+        <blockquote class="tquote">
+          “They show up on schedule and my yard has never looked better. Edges are sharp and cleanup is spotless.”
+        </blockquote>
+        <div class="tverify">
+          <span class="pill">Service: Weekly Mowing</span>
+          <span class="pill pill--ok">Verified Customer</span>
+        </div>
+      </article>
+
+      <!-- Review 2 -->
+      <article class="tcard">
+        <div class="tcard__head">
+          <div class="avatar" aria-hidden="true">LP</div>
+          <div class="tmeta">
+            <h3 class="tname">Luis P.</h3>
+            <p class="twhere">{{CITY}}</p>
+          </div>
+          <div class="tstars" aria-label="5 stars">
+            <span>★★★★★</span>
+          </div>
+        </div>
+        <blockquote class="tquote">
+          “Clean edges, great communication, and fair recommendations. The irrigation tune-up lowered our water bill.”
+        </blockquote>
+        <div class="tverify">
+          <span class="pill">Service: Irrigation Check</span>
+          <span class="pill pill--ok">Verified Customer</span>
+        </div>
+      </article>
+
+      <!-- Review 3 -->
+      <article class="tcard">
+        <div class="tcard__head">
+          <div class="avatar" aria-hidden="true">PK</div>
+          <div class="tmeta">
+            <h3 class="tname">Priya K.</h3>
+            <p class="twhere">{{CITY}}</p>
+          </div>
+          <div class="tstars" aria-label="5 stars">
+            <span>★★★★★</span>
+          </div>
+        </div>
+        <blockquote class="tquote">
+          “Our before/after was unreal. They handled the leaves, refreshed mulch, and the hedges look perfect.”
+        </blockquote>
+        <div class="tverify">
+          <span class="pill">Service: Seasonal Clean-up</span>
+          <span class="pill pill--ok">Verified Customer</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="reviews__cta">
+      <a class="btn btn-primary" href="#quote">Get a Quote</a>
+      <a class="btn btn-ghost" href="tel:{{PHONE}}">Call {{PHONE}}</a>
+    </div>
+  </div>
+</section>
+
 
     <!-- Service Areas -->
     <section id="areas" class="section section--alt">
