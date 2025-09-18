@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{BUSINESS_NAME}} — Landscaping & Lawn Care in {{CITY}}</title>
+  <meta name="description" content="{{BUSINESS_NAME}} provides reliable landscaping & lawn care in {{CITY}}. Weekly mowing, landscape design, mulch/edging, hedge trimming, seasonal clean-ups, and irrigation checks. Call {{PHONE}}." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{BUSINESS_NAME}} — Landscaping & Lawn Care in {{CITY}}">
+  <meta property="og:description" content="Beautiful Lawns, Zero Hassle. Insured, 5-Star Rated, Satisfaction Guaranteed.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="{{CTA_URL}}">
+
+  <link rel="canonical" href="{{CTA_URL}}">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Skip link -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Sticky Nav -->
+  <header class="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="#home" class="brand" aria-label="{{BUSINESS_NAME}} home">
+        <span class="brand__mark" aria-hidden="true">🌿</span>
+        <span class="brand__name">{{BUSINESS_NAME}}</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#areas">Areas</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav__cta">
+        <a class="btn btn-primary" href="tel:{{PHONE}}" data-cta="nav-call">Call {{PHONE}}</a>
+      </div>
+
+      <button class="nav__toggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+        <span class="nav__bar" aria-hidden="true"></span>
+        <span class="nav__bar" aria-hidden="true"></span>
+        <span class="nav__bar" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!-- Mobile flyout -->
+    <div id="mobileMenu" class="mobile-menu" hidden>
+      <nav class="mobile-menu__nav" aria-label="Mobile">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#areas">Areas</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary" href="tel:{{PHONE}}" data-cta="nav-call-mobile">Call {{PHONE}}</a>
+        <a class="btn btn-ghost" href="#quote">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <h1 class="hero__title">Beautiful Lawns, Zero Hassle.</h1>
+          <p class="hero__sub">Trusted landscaping & lawn care in {{CITY}} — on time, detail-oriented, and always professional.</p>
+          <div class="hero__ctas">
+            <a class="btn btn-primary" href="tel:{{PHONE}}" data-cta="hero-call">Call Now</a>
+            <a class="btn btn-ghost" href="#quote">Get a Quote</a>
+          </div>
+          <ul class="hero__badges" aria-label="Trust badges">
+            <li class="chip">Insured</li>
+            <li class="chip">5-Star Rated</li>
+            <li class="chip">Satisfaction Guaranteed</li>
+          </ul>
+          <p class="hero__phone"><strong>{{PHONE}}</strong></p>
+        </div>
+
+        <div class="hero__media" aria-hidden="true">
+          <!-- Decorative lawn shape -->
+          <div class="lawn-shape"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section">
+      <div class="container">
+        <header class="section__head">
+          <h2>Services</h2>
+          <p>Everything your yard needs, season after season.</p>
+        </header>
+
+        <div class="grid services__grid">
+          <article class="card service">
+            <h3>Weekly Mowing</h3>
+            <p>Consistent cuts, edges, and blow-off to keep your lawn pristine.</p>
+          </article>
+          <article class="card service">
+            <h3>Landscape Design</h3>
+            <p>Smart layouts, plant selection, and softscapes that fit your property.</p>
+          </article>
+          <article class="card service">
+            <h3>Mulch / Edging</h3>
+            <p>Fresh mulch and crisp edges to improve curb appeal and soil health.</p>
+          </article>
+          <article class="card service">
+            <h3>Hedge Trimming</h3>
+            <p>Clean lines and shapes for shrubs, hedges, and small trees.</p>
+          </article>
+          <article class="card service">
+            <h3>Seasonal Clean-ups</h3>
+            <p>Leaf removal, bed refresh, and storm debris clean-up.</p>
+          </article>
+          <article class="card service">
+            <h3>Irrigation Check</h3>
+            <p>Sprinkler inspection and tuning to reduce waste and ensure coverage.</p>
+          </article>
+        </div>
+
+        <div class="section__cta">
+          <a class="btn btn-primary" href="#quote">Get a Quote</a>
+          <a class="btn btn-ghost" href="tel:{{PHONE}}">Call {{PHONE}}</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why" class="section section--alt">
+      <div class="container">
+        <header class="section__head">
+          <h2>Why Choose {{BUSINESS_NAME}}?</h2>
+        </header>
+        <div class="grid why__grid">
+          <div class="card">
+            <h3>Reliable Scheduling</h3>
+            <p>Set, predictable routes with text updates so you’re never guessing.</p>
+          </div>
+          <div class="card">
+            <h3>Detail-First Care</h3>
+            <p>Edges, clean-ups, and finishing touches on every visit.</p>
+          </div>
+          <div class="card">
+            <h3>Insured & Vetted</h3>
+            <p>Fully insured team with 5-star local reviews.</p>
+          </div>
+          <div class="card">
+            <h3>Local Expertise</h3>
+            <p>We know {{CITY}} soils, seasons, and water restrictions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Before / After -->
+    <section id="before-after" class="section">
+      <div class="container">
+        <header class="section__head">
+          <h2>Before & After</h2>
+          <p>See how consistent care transforms your property.</p>
+        </header>
+
+        <div class="grid ba__grid">
+          <figure class="card ba">
+            <img src="assets/before-1.jpg" alt="Lawn before service — patchy grass and overgrown edges" loading="lazy" decoding="async" />
+            <figcaption class="ba__label">Before</figcaption>
+          </figure>
+          <figure class="card ba">
+            <img src="assets/after-1.jpg" alt="Lawn after service — freshly cut grass and clean edging" loading="lazy" decoding="async" />
+            <figcaption class="ba__label ba__label--after">After</figcaption>
+          </figure>
+
+          <figure class="card ba">
+            <img src="assets/before-2.jpg" alt="Backyard before clean-up — leaves and debris" loading="lazy" decoding="async" />
+            <figcaption class="ba__label">Before</figcaption>
+          </figure>
+          <figure class="card ba">
+            <img src="assets/after-2.jpg" alt="Backyard after clean-up — tidy beds and clear pathways" loading="lazy" decoding="async" />
+            <figcaption class="ba__label ba__label--after">After</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="section section--alt">
+      <div class="container">
+        <header class="section__head">
+          <h2>Plans</h2>
+          <p>Simple options — tailored to your property.</p>
+        </header>
+
+        <div class="grid pricing__grid">
+          <article class="card plan">
+            <h3>Starter</h3>
+            <ul class="plan__bullets">
+              <li>Mowing (schedule set)</li>
+              <li>Edging each visit</li>
+              <li>Walkways blow-off</li>
+            </ul>
+            <a class="btn btn-ghost" href="#quote">Request Starter</a>
+          </article>
+
+          <article class="card plan plan--featured" aria-label="Recommended plan">
+            <div class="chip chip--accent">Most Popular</div>
+            <h3>Standard</h3>
+            <ul class="plan__bullets">
+              <li>Mowing + Edging</li>
+              <li>Hedge trimming (monthly)</li>
+              <li>Bed touch-ups</li>
+            </ul>
+            <a class="btn btn-primary" href="#quote">Request Standard</a>
+          </article>
+
+          <article class="card plan">
+            <h3>Premium</h3>
+            <ul class="plan__bullets">
+              <li>Full Seasonal Plan</li>
+              <li>Spring/Fall clean-ups</li>
+              <li>Irrigation checks</li>
+            </ul>
+            <a class="btn btn-ghost" href="#quote">Request Premium</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="section">
+      <div class="container">
+        <header class="section__head">
+          <h2>What Neighbors Say</h2>
+        </header>
+
+        <div class="grid reviews__grid">
+          <article class="card review">
+            <div class="stars" aria-label="5 stars">★★★★★</div>
+            <p>“They show up on schedule and my yard has never looked better.”</p>
+            <p class="review__name">— Jamie R.</p>
+          </article>
+          <article class="card review">
+            <div class="stars" aria-label="5 stars">★★★★★</div>
+            <p>“Clean edges, great communication, and fair recommendations.”</p>
+            <p class="review__name">— Luis P.</p>
+          </article>
+          <article class="card review">
+            <div class="stars" aria-label="5 stars">★★★★★</div>
+            <p>“Our before/after was unreal. Totally worth it.”</p>
+            <p class="review__name">— Priya K.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section id="areas" class="section section--alt">
+      <div class="container">
+        <header class="section__head">
+          <h2>Service Areas</h2>
+          <p>We’re local to {{CITY}} and serve:</p>
+        </header>
+
+        <ul class="areas__list" aria-label="Service areas">
+          <!-- Render comma-separated {{SERVICE_AREAS}} as individual list items (or leave as one line if templating is manual) -->
+          <li>{{SERVICE_AREAS}}</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <header class="section__head">
+          <h2>Contact & Booking</h2>
+          <p>Tell us about your property and we’ll follow up quickly.</p>
+        </header>
+
+        <div class="grid contact__grid">
+          <form id="quote" class="card form" aria-labelledby="quoteTitle" novalidate>
+            <h3 id="quoteTitle">Get a Quote</h3>
+
+            <div class="field">
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+              <small id="err-name" class="error" role="alert"></small>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
+              <small id="err-phone" class="error" role="alert"></small>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+              <small id="err-email" class="error" role="alert"></small>
+            </div>
+
+            <div class="field">
+              <label for="service">Service Type</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service…</option>
+                <option>Weekly Mowing</option>
+                <option>Landscape Design</option>
+                <option>Mulch / Edging</option>
+                <option>Hedge Trimming</option>
+                <option>Seasonal Clean-ups</option>
+                <option>Irrigation Check</option>
+              </select>
+              <small id="err-service" class="error" role="alert"></small>
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+              <small id="err-message" class="error" role="alert"></small>
+            </div>
+
+            <div class="form__actions">
+              <button class="btn btn-primary" type="submit">Send Request</button>
+              <a class="btn btn-ghost" href="tel:{{PHONE}}">Call {{PHONE}}</a>
+            </div>
+
+            <p class="form__note">By submitting, you agree to be contacted about your request.</p>
+            <p id="formSuccess" class="form__success" role="status" hidden>Thanks! We’ve received your request.</p>
+          </form>
+
+          <aside class="card contact__info">
+            <h3>Reach Us</h3>
+            <ul class="contact__list">
+              <li><strong>Phone:</strong> <a href="tel:{{PHONE}}">{{PHONE}}</a></li>
+              <li><strong>Email:</strong> <a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+              <li><strong>Address:</strong> {{ADDRESS}}</li>
+              <li><strong>Hours:</strong> Mon–Sat 8am–6pm</li>
+            </ul>
+            <div class="socials">
+              <a href="#" aria-label="Facebook" class="socials__icon" title="Facebook">
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M13 10h3l-1 4h-2v8h-4v-8H7v-4h2V8a4 4 0 0 1 4-4h3v4h-3a1 1 0 0 0-1 1v1z" fill="currentColor"/></svg>
+              </a>
+              <a href="#" aria-label="Instagram" class="socials__icon" title="Instagram">
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.75a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z" fill="currentColor"/></svg>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <h3 class="brand__name">{{BUSINESS_NAME}}</h3>
+        <p>Licensed &amp; Insured • Serving {{CITY}} and surrounding areas.</p>
+        <p class="footer__disclaimer">Disclaimer: This website may contain placeholders. All work quoted after on-site assessment.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul class="footer__list">
+          <li><a href="tel:{{PHONE}}">{{PHONE}}</a></li>
+          <li><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+          <li>{{ADDRESS}}</li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Quick Links</h4>
+        <ul class="footer__list">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#areas">Areas</a></li>
+          <li><a href="#quote">Get a Quote</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Hours</h4>
+        <ul class="footer__list">
+          <li>Mon–Sat: 8am–6pm</li>
+          <li>Sun: Closed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; <span id="year"></span> {{BUSINESS_NAME}}. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile bottom bar -->
+  <div class="mobile-cta" role="region" aria-label="Quick actions">
+    <a class="mobile-cta__btn" href="tel:{{PHONE}}" data-cta="bottom-call">Call</a>
+    <a class="mobile-cta__btn mobile-cta__btn--primary" href="#quote">Get a Quote</a>
+  </div>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LandscapingBusiness",
+    "name": "{{BUSINESS_NAME}}",
+    "url": "{{CTA_URL}}",
+    "telephone": "{{PHONE}}",
+    "email": "{{EMAIL}}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ADDRESS}}",
+      "addressLocality": "{{CITY}}"
+    },
+    "areaServed": "{{SERVICE_AREAS}}",
+    "image": "{{CTA_URL}}/assets/og.jpg",
+    "priceRange": "$$",
+    "description": "Landscaping & Lawn Care: Weekly Mowing, Landscape Design, Mulch/Edging, Hedge Trimming, Seasonal Clean-ups, Irrigation Check."
+  }
+  </script>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
