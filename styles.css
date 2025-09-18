@@ -181,12 +181,24 @@ a:hover{ text-decoration: underline; }
    Hero
    ========================= */
 .hero{
+  /* layered, outdoor-ish wash */
   background:
-    radial-gradient(600px 300px at 75% 20%, color-mix(in oklab, var(--secondary) 12%, transparent), transparent 60%),
-    radial-gradient(800px 400px at 10% 10%, color-mix(in oklab, var(--primary) 10%, transparent), transparent 60%),
-    #f7faf8;
-  padding: 4.5rem 0 3rem;
+    radial-gradient(900px 420px at 15% 10%, color-mix(in oklab, var(--secondary) 12%, transparent), transparent 60%),
+    linear-gradient(180deg, #f7faf8 0%, #ffffff 60%);
+  padding: 5rem 0 3.25rem;
+  position: relative;
+  overflow: clip;
 }
+.hero::after{
+  /* angled section divider */
+  content:"";
+  position:absolute; left:0; right:0; bottom:-1px; height:48px;
+  background: linear-gradient(180deg, transparent 0 40%, color-mix(in oklab, var(--secondary) 6%, #fff) 40% 100%);
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+}
+.hero__title{ letter-spacing:.2px; }
+.hero__sub{ color: color-mix(in oklab, var(--ink) 70%, #fff); }
+
 .hero__inner{
   display: grid; gap: 2rem; align-items: center;
 }
