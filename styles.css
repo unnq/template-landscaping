@@ -323,6 +323,134 @@ a:hover{ text-decoration: underline; }
 /* Section CTA alignment */
 .section__cta{ margin-top: 1rem; display: flex; gap: .6rem; flex-wrap: wrap; }
 
+
+/* =========================
+   WHY CHOOSE US — v2
+   ========================= */
+.why--v2{
+  position: relative;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #fbfdfb 100%);
+  border-top: 1px solid color-mix(in oklab, var(--ink) 6%, #e9eee9);
+  border-bottom: 1px solid color-mix(in oklab, var(--ink) 6%, #e9eee9);
+  overflow: clip;
+}
+
+/* subtle leaf-grid texture (very light, printable) */
+.why--v2::before{
+  content:"";
+  position:absolute; inset:0; pointer-events:none; opacity:.06;
+  background:
+    repeating-linear-gradient(135deg,
+      color-mix(in oklab, var(--secondary) 12%, #fff) 0 14px,
+      transparent 14px 28px);
+  mask-image: linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent);
+}
+
+.why__head{
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+.why__kicker{
+  display:inline-block; font-weight:800; letter-spacing:.18px;
+  color: var(--primary);
+  background: color-mix(in oklab, var(--secondary) 14%, #fff);
+  border:1px solid color-mix(in oklab, var(--secondary) 40%, #e5e7eb);
+  border-radius: 999px;
+  padding: .25rem .6rem;
+}
+.why__title{
+  margin: .6rem 0 .25rem;
+  font-size: clamp(1.6rem, 2vw + 1rem, 2.2rem);
+  letter-spacing:.2px;
+}
+.why__sub{
+  color: var(--muted);
+  max-width: 56ch;
+  margin: 0 auto;
+}
+
+/* Grid */
+.why__grid{
+  display: grid;
+  gap: clamp(16px, 2vw, 22px);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-top: 1rem;
+}
+
+/* Cards */
+.why-card{
+  position: relative;
+  background: #fff;
+  border: 1px solid color-mix(in oklab, var(--ink) 8%, #e8eee8);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 1rem 1rem .95rem;
+}
+.why-card::before{
+  /* top accent bar */
+  content:"";
+  position:absolute; left:0; right:0; top:0; height:3px;
+  background: linear-gradient(90deg, var(--secondary), color-mix(in oklab, var(--secondary) 30%, var(--primary)));
+  border-top-left-radius: var(--radius); border-top-right-radius: var(--radius);
+}
+
+/* Icon badge */
+.why-icon{
+  width: 44px; height: 44px; border-radius: 12px;
+  display:grid; place-items:center;
+  color: var(--primary);
+  background: color-mix(in oklab, var(--primary) 14%, #f4f7f5);
+  border: 1px solid color-mix(in oklab, var(--ink) 12%, #e6e9e6);
+  box-shadow: inset 0 0 0 2px #fff;
+  margin-bottom: .6rem;
+}
+
+/* Titles and body */
+.why-card__title{
+  font-weight: 800; letter-spacing:.2px; margin:.1rem 0 .25rem;
+}
+.why-card__text{
+  color: var(--muted);
+  margin: 0 0 .5rem;
+}
+
+/* Bulleted points with checkmarks */
+.why-card__bullets{
+  margin: .25rem 0 0; padding: 0; list-style: none; display:grid; gap:.35rem;
+}
+.why-card__bullets li{
+  position: relative; padding-left: 1.3rem;
+}
+.why-card__bullets li::before{
+  content:""; position:absolute; left:0; top:.25rem; width:.9rem; height:.9rem; border-radius: 4px;
+  background: var(--secondary);
+  box-shadow: 0 1px 0 rgba(0,0,0,.05);
+  -webkit-mask:
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="white" d="M6.2 11.3L2.9 8l1.4-1.4 1.9 1.9L11.8 2.9l1.4 1.4z"/></svg>') center / 12px 12px no-repeat;
+  mask:
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="white" d="M6.2 11.3L2.9 8l1.4-1.4 1.9 1.9L11.8 2.9l1.4 1.4z"/></svg>') center / 12px 12px no-repeat;
+}
+
+/* Confidence strip */
+.why__confidence{
+  display:flex; gap:.5rem; flex-wrap:wrap; justify-content:center;
+  margin-top: 1.25rem;
+}
+.why__pill{
+  padding:.45rem .8rem; border-radius:999px; font-weight:700; font-size:.92rem;
+  background: color-mix(in oklab, var(--secondary) 14%, #fff);
+  border:1px solid color-mix(in oklab, var(--secondary) 40%, #e5e7eb);
+  color: color-mix(in oklab, var(--ink) 86%, var(--primary));
+}
+
+/* CTA row */
+.why__cta{
+  margin-top: 1rem; display:flex; gap:.6rem; justify-content:center; flex-wrap:wrap;
+}
+
+
+
 /* =========================
    Pricing
    ========================= */
