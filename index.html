@@ -643,85 +643,98 @@
 </section>
 
 
-    <!-- Contact -->
-    <section id="contact" class="section">
-      <div class="container">
-        <header class="section__head">
-          <h2>Contact & Booking</h2>
-          <p>Tell us about your property and we’ll follow up quickly.</p>
-        </header>
+    <!-- CONTACT — v2 (overwrite) -->
+<section id="contact" class="section contact contact--v2">
+  <div class="container">
+    <header class="contact__head">
+      <span class="contact__kicker">Get in Touch</span>
+      <h2 class="contact__title">Contact & Booking</h2>
+      <p class="contact__sub">Tell us about your property and we’ll follow up quickly.</p>
+    </header>
 
-        <div class="grid contact__grid">
-          <form id="quote" class="card form" aria-labelledby="quoteTitle" novalidate>
-            <h3 id="quoteTitle">Get a Quote</h3>
+    <div class="contact__grid">
+      <!-- Form (keeps id="quote" for existing JS) -->
+      <form id="quote" class="contact-form" aria-labelledby="quoteTitle" novalidate>
+        <h3 id="quoteTitle" class="contact-form__title">Get a Quote</h3>
 
-            <div class="field">
-              <label for="name">Full Name</label>
-              <input id="name" name="name" type="text" autocomplete="name" required>
-              <small id="err-name" class="error" role="alert"></small>
-            </div>
-
-            <div class="field">
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
-              <small id="err-phone" class="error" role="alert"></small>
-            </div>
-
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required>
-              <small id="err-email" class="error" role="alert"></small>
-            </div>
-
-            <div class="field">
-              <label for="service">Service Type</label>
-              <select id="service" name="service" required>
-                <option value="">Select a service…</option>
-                <option>Weekly Mowing</option>
-                <option>Landscape Design</option>
-                <option>Mulch / Edging</option>
-                <option>Hedge Trimming</option>
-                <option>Seasonal Clean-ups</option>
-                <option>Irrigation Check</option>
-              </select>
-              <small id="err-service" class="error" role="alert"></small>
-            </div>
-
-            <div class="field">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
-              <small id="err-message" class="error" role="alert"></small>
-            </div>
-
-            <div class="form__actions">
-              <button class="btn btn-primary" type="submit">Send Request</button>
-              <a class="btn btn-ghost" href="tel:{{PHONE}}">Call {{PHONE}}</a>
-            </div>
-
-            <p class="form__note">By submitting, you agree to be contacted about your request.</p>
-            <p id="formSuccess" class="form__success" role="status" hidden>Thanks! We’ve received your request.</p>
-          </form>
-
-          <aside class="card contact__info">
-            <h3>Reach Us</h3>
-            <ul class="contact__list">
-              <li><strong>Phone:</strong> <a href="tel:{{PHONE}}">{{PHONE}}</a></li>
-              <li><strong>Email:</strong> <a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
-              <li><strong>Address:</strong> {{ADDRESS}}</li>
-              <li><strong>Hours:</strong> Mon–Sat 8am–6pm</li>
-            </ul>
-            <div class="socials">
-              <a href="#" aria-label="Facebook" class="socials__icon" title="Facebook">
-                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M13 10h3l-1 4h-2v8h-4v-8H7v-4h2V8a4 4 0 0 1 4-4h3v4h-3a1 1 0 0 0-1 1v1z" fill="currentColor"/></svg>
-              </a>
-              <a href="#" aria-label="Instagram" class="socials__icon" title="Instagram">
-                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.75a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z" fill="currentColor"/></svg>
-              </a>
-            </div>
-          </aside>
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+          <small id="err-name" class="error" role="alert"></small>
         </div>
-      </div>
-    </section>
+
+        <div class="field field--split">
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
+            <small id="err-phone" class="error" role="alert"></small>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+            <small id="err-email" class="error" role="alert"></small>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="service">Service Type</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service…</option>
+            <option>Weekly Mowing</option>
+            <option>Landscape Design</option>
+            <option>Mulch / Edging</option>
+            <option>Hedge Trimming</option>
+            <option>Seasonal Clean-ups</option>
+            <option>Irrigation Check</option>
+          </select>
+          <small id="err-service" class="error" role="alert"></small>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <small id="err-message" class="error" role="alert"></small>
+        </div>
+
+        <div class="contact-form__actions">
+          <button class="btn btn-primary" type="submit">Send Request</button>
+          <a class="btn btn-ghost" href="tel:{{PHONE}}">Call {{PHONE}}</a>
+        </div>
+
+        <p class="form__note">By submitting, you agree to be contacted about your request.</p>
+        <p id="formSuccess" class="form__success" role="status" hidden>Thanks! We’ve received your request.</p>
+      </form>
+
+      <!-- Info -->
+      <aside class="contact-info">
+        <div class="contact-info__card">
+          <h3>Reach Us</h3>
+          <ul class="contact__list">
+            <li><strong>Phone:</strong> <a href="tel:{{PHONE}}">{{PHONE}}</a></li>
+            <li><strong>Email:</strong> <a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+            <li><strong>Address:</strong> {{ADDRESS}}</li>
+            <li><strong>Hours:</strong> Mon–Sat 8am–6pm</li>
+          </ul>
+
+          <div class="contact-badges">
+            <span class="cbadge">Licensed &amp; Insured</span>
+            <span class="cbadge">Satisfaction Guaranteed</span>
+          </div>
+
+          <div class="socials socials--contact">
+            <a href="#" aria-label="Facebook" class="socials__icon" title="Facebook">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M13 10h3l-1 4h-2v8h-4v-8H7v-4h2V8a4 4 0 0 1 4-4h3v4h-3a1 1 0 0 0-1 1v1z" fill="currentColor"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="socials__icon" title="Instagram">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.75a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
   </main>
 
   <!-- Footer -->
