@@ -329,34 +329,84 @@
 
 
     <!-- Before / After -->
-    <section id="before-after" class="section">
-      <div class="container">
-        <header class="section__head">
-          <h2>Before & After</h2>
-          <p>See how consistent care transforms your property.</p>
-        </header>
+    <!-- BEFORE / AFTER — v2 (overwrite) -->
+<section id="before-after" class="section ba ba--v2">
+  <div class="container">
+    <header class="ba__head">
+      <span class="ba__kicker">Real Results</span>
+      <h2 class="ba__title">Before & After</h2>
+      <p class="ba__sub">Consistent care turns patchy yards into clean, healthy landscapes.</p>
+    </header>
 
-        <div class="grid ba__grid">
-          <figure class="card ba">
-            <img src="assets/before-1.jpg" alt="Lawn before service — patchy grass and overgrown edges" loading="lazy" decoding="async" />
-            <figcaption class="ba__label">Before</figcaption>
-          </figure>
-          <figure class="card ba">
-            <img src="assets/after-1.jpg" alt="Lawn after service — freshly cut grass and clean edging" loading="lazy" decoding="async" />
-            <figcaption class="ba__label ba__label--after">After</figcaption>
-          </figure>
+    <div class="ba__grid">
+      <!-- Pair 1 -->
+      <article class="ba-item card">
+        <fieldset class="ba-toggle">
+          <legend class="sr-only">Choose comparison</legend>
+          <input type="radio" id="pair1-before" name="pair1" checked>
+          <label for="pair1-before">Before</label>
+          <input type="radio" id="pair1-after" name="pair1">
+          <label for="pair1-after">After</label>
+        </fieldset>
 
-          <figure class="card ba">
-            <img src="assets/before-2.jpg" alt="Backyard before clean-up — leaves and debris" loading="lazy" decoding="async" />
-            <figcaption class="ba__label">Before</figcaption>
+        <div class="ba-frame">
+          <figure class="ba-shot ba-shot--before" aria-label="Before">
+            <img src="assets/before-1.jpg" alt="Lawn before service — patchy grass and overgrown edges" loading="lazy" decoding="async">
+            <figcaption class="ba-tag">Before</figcaption>
           </figure>
-          <figure class="card ba">
-            <img src="assets/after-2.jpg" alt="Backyard after clean-up — tidy beds and clear pathways" loading="lazy" decoding="async" />
-            <figcaption class="ba__label ba__label--after">After</figcaption>
+          <figure class="ba-shot ba-shot--after" aria-label="After">
+            <img src="assets/after-1.jpg" alt="Lawn after service — freshly cut grass, crisp edging" loading="lazy" decoding="async">
+            <figcaption class="ba-tag ba-tag--after">After</figcaption>
           </figure>
         </div>
-      </div>
-    </section>
+
+        <div class="ba-notes">
+          <ul>
+            <li>Mowing & edging</li>
+            <li>Bed touch-up</li>
+            <li>Blow-off included</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Pair 2 -->
+      <article class="ba-item card">
+        <fieldset class="ba-toggle">
+          <legend class="sr-only">Choose comparison</legend>
+          <input type="radio" id="pair2-before" name="pair2" checked>
+          <label for="pair2-before">Before</label>
+          <input type="radio" id="pair2-after" name="pair2">
+          <label for="pair2-after">After</label>
+        </fieldset>
+
+        <div class="ba-frame">
+          <figure class="ba-shot ba-shot--before" aria-label="Before">
+            <img src="assets/before-2.jpg" alt="Backyard before clean-up — leaves and debris" loading="lazy" decoding="async">
+            <figcaption class="ba-tag">Before</figcaption>
+          </figure>
+          <figure class="ba-shot ba-shot--after" aria-label="After">
+            <img src="assets/after-2.jpg" alt="Backyard after clean-up — tidy beds and clear pathways" loading="lazy" decoding="async">
+            <figcaption class="ba-tag ba-tag--after">After</figcaption>
+          </figure>
+        </div>
+
+        <div class="ba-notes">
+          <ul>
+            <li>Seasonal clean-up</li>
+            <li>Mulch refresh</li>
+            <li>Haul-off included</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <div class="ba__cta">
+      <a class="btn btn-primary" href="#quote">Get a Quote</a>
+      <a class="btn btn-ghost" href="tel:{{PHONE}}">Call {{PHONE}}</a>
+    </div>
+  </div>
+</section>
+
 
     <!-- Pricing -->
     <section id="pricing" class="section section--alt">
