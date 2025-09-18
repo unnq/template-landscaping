@@ -599,20 +599,49 @@
 </section>
 
 
-    <!-- Service Areas -->
-    <section id="areas" class="section section--alt">
-      <div class="container">
-        <header class="section__head">
-          <h2>Service Areas</h2>
-          <p>We’re local to {{CITY}} and serve:</p>
-        </header>
+   <!-- SERVICE AREAS — v2 (overwrite) -->
+<section id="areas" class="section areas areas--v2">
+  <div class="container">
+    <header class="areas__head">
+      <span class="areas__kicker">Local Coverage</span>
+      <h2 class="areas__title">Service Areas</h2>
+      <p class="areas__sub">We’re based in {{CITY}} and proudly serve neighborhoods across Orange County.</p>
+    </header>
 
-        <ul class="areas__list" aria-label="Service areas">
-          <!-- Render comma-separated {{SERVICE_AREAS}} as individual list items (or leave as one line if templating is manual) -->
-          <li>{{SERVICE_AREAS}}</li>
-        </ul>
-      </div>
-    </section>
+    <ul class="areas__list" aria-label="Service areas">
+      <li>
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2C8 2 5 5.1 5 8.5c0 5.2 7 13.5 7 13.5s7-8.3 7-13.5C19 5.1 16 2 12 2zm0 9.5c-1.6 0-3-1.3-3-3s1.4-3 3-3c1.7 0 3 1.3 3 3s-1.3 3-3 3z"/></svg>
+        Anaheim
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2C8 2 5 5.1 5 8.5c0 5.2 7 13.5 7 13.5s7-8.3 7-13.5C19 5.1 16 2 12 2zm0 9.5c-1.6 0-3-1.3-3-3s1.4-3 3-3c1.7 0 3 1.3 3 3s-1.3 3-3 3z"/></svg>
+        Irvine
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2C8 2 5 5.1 5 8.5c0 5.2 7 13.5 7 13.5s7-8.3 7-13.5C19 5.1 16 2 12 2zm0 9.5c-1.6 0-3-1.3-3-3s1.4-3 3-3c1.7 0 3 1.3 3 3s-1.3 3-3 3z"/></svg>
+        Huntington Beach
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2C8 2 5 5.1 5 8.5c0 5.2 7 13.5 7 13.5s7-8.3 7-13.5C19 5.1 16 2 12 2zm0 9.5c-1.6 0-3-1.3-3-3s1.4-3 3-3c1.7 0 3 1.3 3 3s-1.3 3-3 3z"/></svg>
+        Newport Beach
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2C8 2 5 5.1 5 8.5c0 5.2 7 13.5 7 13.5s7-8.3 7-13.5C19 5.1 16 2 12 2zm0 9.5c-1.6 0-3-1.3-3-3s1.4-3 3-3c1.7 0 3 1.3 3 3s-1.3 3-3 3z"/></svg>
+        Fullerton
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2C8 2 5 5.1 5 8.5c0 5.2 7 13.5 7 13.5s7-8.3 7-13.5C19 5.1 16 2 12 2zm0 9.5c-1.6 0-3-1.3-3-3s1.4-3 3-3c1.7 0 3 1.3 3 3s-1.3 3-3 3z"/></svg>
+        Costa Mesa
+      </li>
+    </ul>
+
+    <div class="areas__cta">
+      <a class="btn btn-primary" href="#quote">Get a Quote</a>
+      <a class="btn btn-ghost" href="tel:{{PHONE}}">Call {{PHONE}}</a>
+    </div>
+  </div>
+</section>
+
 
     <!-- Contact -->
     <section id="contact" class="section">
