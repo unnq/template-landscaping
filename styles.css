@@ -20,8 +20,8 @@
    Design Tokens
    ========================= */
 :root{
-  --primary: {{PRIMARY_COLOR}};
-  --secondary: {{SECONDARY_COLOR}};
+  --primary: #14532D;
+  --secondary: #84CC16;
   --accent: #f2f1f0;
   --ink: #1b1b1c;
   --muted: #6b7280;
