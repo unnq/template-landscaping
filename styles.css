@@ -716,24 +716,133 @@ a:hover{ text-decoration: underline; }
 
 
 /* =========================
-   Reviews
+   REVIEWS — v2
+   Distinct band, boxed testimonials, avatars, verified chips.
    ========================= */
-.reviews__grid{
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+.reviews--v2{
+  position: relative;
+  background:
+    radial-gradient(720px 300px at 85% -10%, color-mix(in oklab, var(--secondary) 10%, #fff), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #f7faf8 100%);
+  border-top: 1px solid color-mix(in oklab, var(--ink) 6%, #e9eee9);
+  border-bottom: 1px solid color-mix(in oklab, var(--ink) 6%, #e9eee9);
+  overflow: clip;
 }
-.stars{ color: #f5a524; font-size: 1.1rem; }
 
-/* =========================
-   Areas
-   ========================= */
-.areas__list{
-  background: var(--surface);
-  border: 1px dashed #e5e7eb;
-  border-radius: var(--radius);
-  padding: 1rem;
-  columns: 1;
+/* Head */
+.reviews__head{
+  text-align:center;
+  margin-bottom: 1.25rem;
 }
-@media (min-width: 900px){ .areas__list{ columns: 2; } }
+.reviews__kicker{
+  display:inline-block; font-weight:800; letter-spacing:.18px;
+  color: var(--primary);
+  background: color-mix(in oklab, var(--secondary) 14%, #fff);
+  border:1px solid color-mix(in oklab, var(--secondary) 40%, #e5e7eb);
+  border-radius:999px; padding:.25rem .6rem;
+}
+.reviews__title{
+  margin:.6rem 0 .25rem;
+  font-size: clamp(1.6rem, 2vw + 1rem, 2.2rem);
+  letter-spacing:.2px;
+}
+.reviews__sub{
+  color: var(--muted);
+  max-width: 56ch; margin: 0 auto .5rem;
+}
+
+/* Meta strip */
+.reviews__meta{
+  display:inline-flex; align-items:center; gap:.5rem; flex-wrap:wrap;
+  background:#fff; border:1px solid #e6ece6; border-radius:999px; padding:.35rem .6rem;
+  box-shadow: var(--shadow-soft);
+}
+.reviews__meta .stars{ color: #f5a524; display:inline-flex; gap:2px; }
+.reviews__score{ font-weight:900; }
+.reviews__count{ color: var(--muted); }
+.reviews__verified{
+  display:inline-flex; align-items:center; gap:.35rem;
+  padding:.15rem .5rem; border-radius:999px; font-weight:800; font-size:.82rem;
+  background: color-mix(in oklab, var(--secondary) 14%, #fff);
+  border:1px solid color-mix(in oklab, var(--secondary) 40%, #e5e7eb);
+}
+
+/* Grid of testimonials */
+.reviews__grid{
+  display:grid;
+  gap: clamp(16px, 2vw, 22px);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 1rem;
+}
+
+/* Testimonial card */
+.tcard{
+  background:#fff;
+  border: 1px solid color-mix(in oklab, var(--ink) 8%, #e8eee8);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 1rem;
+  display:grid; gap:.6rem;
+  position: relative;
+}
+.tcard::after{
+  /* subtle quote mark */
+  content:"“";
+  position:absolute; right:12px; top:-6px;
+  font-family: "Playfair Display", Manrope, system-ui, sans-serif;
+  font-size: 4rem; line-height:1; color: color-mix(in oklab, var(--ink) 10%, #e6ece6);
+  pointer-events:none;
+}
+
+/* Card header */
+.tcard__head{
+  display:grid; grid-template-columns: auto 1fr auto; align-items:center; gap:.6rem;
+}
+.avatar{
+  width:42px; height:42px; border-radius:12px; display:grid; place-items:center; font-weight:900;
+  background: color-mix(in oklab, var(--primary) 12%, #f4f7f5);
+  color: var(--primary);
+  border: 1px solid color-mix(in oklab, var(--ink) 12%, #e6e9e6);
+  box-shadow: inset 0 0 0 2px #fff;
+}
+.tname{ font-weight:900; margin:0; }
+.twhere{ margin:0; color: var(--muted); font-size:.92rem; }
+.tstars span{ color:#f5a524; font-weight:900; }
+
+/* Quote text */
+.tquote{
+  margin: 0;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Verification pills */
+.tverify{ display:flex; gap:.4rem; flex-wrap:wrap; }
+.pill{
+  padding:.28rem .6rem; border-radius:999px; font-size:.82rem; font-weight:800;
+  background:#fff; border:1px dashed color-mix(in oklab, var(--ink) 12%, #dfe5df);
+  color: color-mix(in oklab, var(--ink) 86%, var(--primary));
+}
+.pill--ok{
+  background: color-mix(in oklab, var(--secondary) 16%, #fff);
+  border:1px solid color-mix(in oklab, var(--secondary) 40%, #e5e7eb);
+}
+
+/* CTA */
+.reviews__cta{
+  margin-top: 1rem; display:flex; gap:.6rem; justify-content:center; flex-wrap:wrap;
+}
+
+/* Hover delight */
+@media (hover:hover){
+  .tcard{ transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease; }
+  .tcard:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    border-color: color-mix(in oklab, var(--ink) 14%, #e1e8e1);
+  }
+}
+
 
 /* =========================
    Contact / Form
