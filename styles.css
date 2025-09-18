@@ -906,33 +906,150 @@ a:hover{ text-decoration: underline; }
 
    
 /* =========================
-   Contact / Form
+   CONTACT — v2
+   Banded background, clear input boundaries, no top-stripe clash.
    ========================= */
-.contact__grid{
-  grid-template-columns: 1.2fr .8fr;
+.contact--v2{
+  background:
+    radial-gradient(900px 320px at 100% 0%, color-mix(in oklab, var(--secondary) 10%, #fff), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #f6faf7 100%);
+  border-top: 1px solid color-mix(in oklab, var(--ink) 6%, #e9eee9);
+  border-bottom: 1px solid color-mix(in oklab, var(--ink) 6%, #e9eee9);
+  overflow: clip;
 }
-@media (max-width: 900px){ .contact__grid{ grid-template-columns: 1fr; } }
 
-.form .field{ display: grid; gap: .35rem; margin-bottom: .75rem; }
-input, select, textarea{
-  width: 100%;
-  border: 1px solid #e5e7eb;
-  background: #fff;
-  padding: .65rem .75rem;
-  border-radius: 10px;
-  font: inherit;
+.contact__head{
+  text-align:center;
+  margin-bottom: 1.25rem;
 }
-input:focus, select:focus, textarea:focus{
-  outline: 3px solid color-mix(in oklab, var(--secondary) 35%, transparent);
-  border-color: var(--secondary);
+.contact__kicker{
+  display:inline-block; font-weight:800; letter-spacing:.18px;
+  color: var(--primary);
+  background: color-mix(in oklab, var(--secondary) 14%, #fff);
+  border:1px solid color-mix(in oklab, var(--secondary) 40%, #e5e7eb);
+  border-radius:999px; padding:.25rem .6rem;
 }
-.error{
-  color: #b42318;
-  min-height: 1em;
+.contact__title{
+  margin:.6rem 0 .25rem;
+  font-size: clamp(1.6rem, 2vw + 1rem, 2.2rem);
 }
-.form__actions{ display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .25rem; }
+.contact__sub{
+  color: var(--muted); max-width: 56ch; margin: 0 auto;
+}
+
+/* Layout */
+.contact__grid{
+  display: grid;
+  gap: clamp(16px, 2vw, 24px);
+  grid-template-columns: 1.1fr .9fr;
+  margin-top: 1rem;
+}
+@media (max-width: 900px){
+  .contact__grid{ grid-template-columns: 1fr; }
+}
+
+/* Neutralize any global card stripe (important to avoid clash) */
+.contact--v2 .card::before,
+.contact--v2 .contact-form::before,
+.contact--v2 .contact-info__card::before{ content: none !important; }
+
+/* Form card */
+.contact-form{
+  background:#fff;
+  border: 1px solid color-mix(in oklab, var(--ink) 10%, #e6ebe6);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 1rem;
+}
+.contact-form__title{
+  margin: 0 0 .5rem;
+  font-weight: 900;
+  letter-spacing: .2px;
+}
+
+/* Field grouping */
+.field{ display: grid; gap: .35rem; margin-bottom: .75rem; }
+.field--split{ grid-template-columns: 1fr 1fr; gap: .6rem; }
+@media (max-width: 600px){ .field--split{ grid-template-columns: 1fr; } }
+
+/* Inputs — stronger boundaries & improved focus */
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+  width:100%; font: inherit; background:#fff;
+  border: 1.5px solid color-mix(in oklab, var(--ink) 14%, #dfe5df);
+  border-radius: 12px;
+  padding: .7rem .8rem;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{ color: #9aa6a0; }
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus{
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--primary) 25%, #c7e6cf);
+}
+
+/* Error text */
+.contact-form .error{
+  color: #b42318; min-height: 1em;
+}
+
+/* Actions */
+.contact-form__actions{
+  display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.25rem;
+}
+.contact-form .btn{ min-width: 180px; }
+
+/* Success message */
 .form__success{
-  background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: .6rem .75rem; border-radius: 10px; margin-top: .75rem;
+  background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0;
+  padding: .6rem .75rem; border-radius: 10px; margin-top: .75rem;
+}
+
+/* Info panel */
+.contact-info__card{
+  background: #ffffffb3; /* touch of translucency on light band */
+  backdrop-filter: saturate(130%) blur(4px);
+  border: 1px solid color-mix(in oklab, var(--ink) 10%, #e6ebe6);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 1rem;
+}
+.contact-info__card h3{ margin: 0 0 .5rem; font-weight: 900; }
+
+.contact__list{
+  list-style: none; padding:0; margin:0 0 .75rem;
+  display:grid; gap:.35rem;
+}
+.contact__list a{ color: var(--primary); }
+
+.contact-badges{
+  display:flex; gap:.4rem; flex-wrap:wrap; margin-bottom:.75rem;
+}
+.cbadge{
+  padding:.35rem .6rem; border-radius: 999px; font-weight:800; font-size:.82rem;
+  background: color-mix(in oklab, var(--secondary) 16%, #fff);
+  border:1px solid color-mix(in oklab, var(--secondary) 40%, #e5e7eb);
+  color: color-mix(in oklab, var(--ink) 86%, var(--primary));
+}
+
+/* Social icons row */
+.socials--contact{ display:flex; gap:.5rem; }
+.socials--contact .socials__icon{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:40px; height:40px; border-radius:10px;
+  background:#fff; border:1px solid color-mix(in oklab, var(--ink) 10%, #e6ebe6);
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+@media (hover:hover){
+  .socials--contact .socials__icon:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  }
 }
 
 /* =========================
