@@ -123,14 +123,13 @@ a:hover{ text-decoration: underline; }
 
 /* Chips */
 .chip{
-  display: inline-flex; align-items: center; gap: .5ch;
-  border-radius: 999px;
-  padding: .4rem .7rem;
-  background: var(--accent);
-  color: var(--ink);
-  font-size: .9rem;
-  border: 1px dashed #ddd;
+  display:inline-flex; align-items:center; gap:.5ch; border-radius:999px;
+  padding:.45rem .8rem; font-size:.9rem; font-weight:700;
+  background: color-mix(in oklab, var(--secondary) 14%, #fff);
+  color: color-mix(in oklab, var(--ink) 86%, var(--primary));
+  border:1px solid color-mix(in oklab, var(--secondary) 30%, #e5e7eb);
 }
+
 .chip--accent{
   background: color-mix(in oklab, var(--secondary) 16%, white);
   border-color: color-mix(in oklab, var(--secondary) 40%, #ddd);
