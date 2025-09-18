@@ -242,6 +242,17 @@ a:hover{ text-decoration: underline; }
 }
 .service h3{ margin-bottom: .35rem; }
 
+.service h3{ margin-bottom:.25rem; }
+.service::after{
+  content:"";
+  position:absolute; right:14px; top:14px; width:38px; height:38px; border-radius:50%;
+  background: radial-gradient(circle at 30% 30%, #fff 0 35%, color-mix(in oklab, var(--secondary) 22%, #eaf3e7) 36% 100%);
+  border:1px solid #e2e8e2;
+  box-shadow: inset 0 0 0 2px #fff;
+}
+.service{ padding-top:1.4rem; }
+
+
 /* =========================
    Before/After
    ========================= */
