@@ -409,47 +409,95 @@
 
 
     <!-- Pricing -->
-    <section id="pricing" class="section section--alt">
-      <div class="container">
-        <header class="section__head">
-          <h2>Plans</h2>
-          <p>Simple options — tailored to your property.</p>
+    <!-- PRICING — v2 (overwrite) -->
+<section id="pricing" class="section pricing pricing--v2">
+  <div class="container">
+    <header class="pricing__head">
+      <span class="pricing__kicker">Plans & Packages</span>
+      <h2 class="pricing__title">Simple options — tailored to your property.</h2>
+      <p class="pricing__sub">Pick a starting point. We’ll fine-tune on the quote call.</p>
+    </header>
+
+    <div class="pricing__grid">
+      <!-- Starter -->
+      <article class="price-card">
+        <header class="price-card__head">
+          <div class="price-card__icon" aria-hidden="true">
+            <!-- mower -->
+            <svg viewBox="0 0 24 24" width="22" height="22">
+              <path fill="currentColor" d="M6 17a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm12-3H9l-2-7H4l2 7H4a2 2 0 0 0-2 2v2h2.17a4 4 0 0 1 7.66 0H18a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2Z"/>
+            </svg>
+          </div>
+          <h3 class="price-card__title">Starter</h3>
+          <span class="price-card__tag">Routine Care</span>
         </header>
-
-        <div class="grid pricing__grid">
-          <article class="card plan">
-            <h3>Starter</h3>
-            <ul class="plan__bullets">
-              <li>Mowing (schedule set)</li>
-              <li>Edging each visit</li>
-              <li>Walkways blow-off</li>
-            </ul>
-            <a class="btn btn-ghost" href="#quote">Request Starter</a>
-          </article>
-
-          <article class="card plan plan--featured" aria-label="Recommended plan">
-            <div class="chip chip--accent">Most Popular</div>
-            <h3>Standard</h3>
-            <ul class="plan__bullets">
-              <li>Mowing + Edging</li>
-              <li>Hedge trimming (monthly)</li>
-              <li>Bed touch-ups</li>
-            </ul>
-            <a class="btn btn-primary" href="#quote">Request Standard</a>
-          </article>
-
-          <article class="card plan">
-            <h3>Premium</h3>
-            <ul class="plan__bullets">
-              <li>Full Seasonal Plan</li>
-              <li>Spring/Fall clean-ups</li>
-              <li>Irrigation checks</li>
-            </ul>
-            <a class="btn btn-ghost" href="#quote">Request Premium</a>
-          </article>
+        <ul class="price-card__list">
+          <li>Mowing (schedule set)</li>
+          <li>Edging each visit</li>
+          <li>Walkways blow-off</li>
+        </ul>
+        <div class="price-card__cta">
+          <a class="btn btn-ghost" href="#quote">Request Starter</a>
         </div>
-      </div>
-    </section>
+      </article>
+
+      <!-- Standard (Featured) -->
+      <article class="price-card price-card--featured" aria-label="Recommended plan">
+        <div class="price-card__ribbon">Most Popular</div>
+        <header class="price-card__head">
+          <div class="price-card__icon" aria-hidden="true">
+            <!-- badge/check -->
+            <svg viewBox="0 0 24 24" width="22" height="22">
+              <path fill="currentColor" d="M12 2l2.5 5L20 8l-4 4 .9 5.8L12 15.5 7.1 17.8 8 12 4 8l5.5-1L12 2z"/>
+            </svg>
+          </div>
+          <h3 class="price-card__title">Standard</h3>
+          <span class="price-card__tag">Best Value</span>
+        </header>
+        <ul class="price-card__list">
+          <li>Mowing + Edging</li>
+          <li>Hedge trimming (monthly)</li>
+          <li>Bed touch-ups</li>
+        </ul>
+        <div class="price-card__cta">
+          <a class="btn btn-primary" href="#quote">Request Standard</a>
+        </div>
+      </article>
+
+      <!-- Premium -->
+      <article class="price-card">
+        <header class="price-card__head">
+          <div class="price-card__icon" aria-hidden="true">
+            <!-- leaf/water -->
+            <svg viewBox="0 0 24 24" width="22" height="22">
+              <path fill="currentColor" d="M12 2S6 8 6 12a6 6 0 0 0 12 0c0-4-6-10-6-10Z"/>
+            </svg>
+          </div>
+          <h3 class="price-card__title">Premium</h3>
+          <span class="price-card__tag">Full Seasonal Plan</span>
+        </header>
+        <ul class="price-card__list">
+          <li>Full seasonal plan</li>
+          <li>Spring/Fall clean-ups</li>
+          <li>Irrigation checks</li>
+        </ul>
+        <div class="price-card__cta">
+          <a class="btn btn-ghost" href="#quote">Request Premium</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="pricing__notes">
+      <p>All plans include licensed & insured service. Customize any plan during your quote.</p>
+    </div>
+
+    <div class="pricing__cta">
+      <a class="btn btn-primary" href="#quote">Get a Quote</a>
+      <a class="btn btn-ghost" href="tel:{{PHONE}}">Call {{PHONE}}</a>
+    </div>
+  </div>
+</section>
+
 
     <!-- Reviews -->
     <section id="reviews" class="section">
