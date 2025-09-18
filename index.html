@@ -235,31 +235,98 @@
 </section>
 
     <!-- Why Choose Us -->
-    <section id="why" class="section section--alt">
-      <div class="container">
-        <header class="section__head">
-          <h2>Why Choose {{BUSINESS_NAME}}?</h2>
-        </header>
-        <div class="grid why__grid">
-          <div class="card">
-            <h3>Reliable Scheduling</h3>
-            <p>Set, predictable routes with text updates so you’re never guessing.</p>
-          </div>
-          <div class="card">
-            <h3>Detail-First Care</h3>
-            <p>Edges, clean-ups, and finishing touches on every visit.</p>
-          </div>
-          <div class="card">
-            <h3>Insured & Vetted</h3>
-            <p>Fully insured team with 5-star local reviews.</p>
-          </div>
-          <div class="card">
-            <h3>Local Expertise</h3>
-            <p>We know {{CITY}} soils, seasons, and water restrictions.</p>
-          </div>
+<section id="why" class="section why why--v2">
+  <div class="container">
+    <header class="why__head">
+      <span class="why__kicker">Why Choose Us</span>
+      <h2 class="why__title">Built for Reliability, Loved for Results.</h2>
+      <p class="why__sub">Straightforward scheduling, meticulous care, and a team that treats your yard like our own.</p>
+    </header>
+
+    <div class="why__grid">
+      <!-- Card 1 -->
+      <article class="why-card">
+        <div class="why-icon" aria-hidden="true">
+          <!-- calendar -->
+          <svg viewBox="0 0 24 24" width="22" height="22">
+            <path fill="currentColor" d="M7 2h2v2h6V2h2v2h3a2 2 0 0 1 2 2v3H2V6a2 2 0 0 1 2-2h3V2zM2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9H2v11zm5-8h4v4H7v-4z"/>
+          </svg>
         </div>
-      </div>
-    </section>
+        <h3 class="why-card__title">Reliable Scheduling</h3>
+        <p class="why-card__text">Locked-in routes and reminders so you always know when we’re coming.</p>
+        <ul class="why-card__bullets">
+          <li>Set day/time windows</li>
+          <li>Text before arrival</li>
+          <li>Weather-aware rescheduling</li>
+        </ul>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="why-card">
+        <div class="why-icon" aria-hidden="true">
+          <!-- check shield -->
+          <svg viewBox="0 0 24 24" width="22" height="22">
+            <path fill="currentColor" d="M12 2l8 3v6c0 5-3.4 9.7-8 11-4.6-1.3-8-6-8-11V5l8-3zm-1 13l6-6-1.4-1.4L11 12.2 8.4 9.6 7 11l4 4z"/>
+          </svg>
+        </div>
+        <h3 class="why-card__title">Detail-First Care</h3>
+        <p class="why-card__text">Edges, blow-off, and tidy beds on every visit—no shortcuts.</p>
+        <ul class="why-card__bullets">
+          <li>Crisp edging & corners</li>
+          <li>Walkways & patios cleaned</li>
+          <li>Optional photo proof</li>
+        </ul>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="why-card">
+        <div class="why-icon" aria-hidden="true">
+          <!-- badge -->
+          <svg viewBox="0 0 24 24" width="22" height="22">
+            <path fill="currentColor" d="M12 2l2.5 5L20 8l-4 4 .9 5.8L12 15.5 7.1 17.8 8 12 4 8l5.5-1L12 2z"/>
+          </svg>
+        </div>
+        <h3 class="why-card__title">Insured & Vetted</h3>
+        <p class="why-card__text">Fully insured team with verified local reviews and references.</p>
+        <ul class="why-card__bullets">
+          <li>Licensed & insured</li>
+          <li>Background-checked crew</li>
+          <li>Local references on request</li>
+        </ul>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="why-card">
+        <div class="why-icon" aria-hidden="true">
+          <!-- leaf -->
+          <svg viewBox="0 0 24 24" width="22" height="22">
+            <path fill="currentColor" d="M12 2C7 7 3 9 2 10c3 7 8 12 10 12s7-5 10-12c-1-1-5-3-10-8z"/>
+          </svg>
+        </div>
+        <h3 class="why-card__title">Local Expertise</h3>
+        <p class="why-card__text">We know {{CITY}} soils, seasons, and watering rules—plans that actually work.</p>
+        <ul class="why-card__bullets">
+          <li>Water-wise plantings</li>
+          <li>Irrigation tune-ups</li>
+          <li>Seasonal cleanups planned</li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- Confidence strip -->
+    <div class="why__confidence" role="note" aria-label="Guarantees">
+      <div class="why__pill">Insured</div>
+      <div class="why__pill">5-Star Rated</div>
+      <div class="why__pill">Satisfaction Guaranteed</div>
+    </div>
+
+    <div class="why__cta">
+      <a class="btn btn-primary" href="#quote">Get a Quote</a>
+      <a class="btn btn-ghost" href="tel:{{PHONE}}">Call {{PHONE}}</a>
+    </div>
+  </div>
+</section>
+
 
     <!-- Before / After -->
     <section id="before-after" class="section">
