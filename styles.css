@@ -78,9 +78,9 @@ a:hover{ text-decoration: underline; }
 .section{
   padding: 4rem 0;
 }
-.section--alt{
-  background: #fafafa;
-}
+.section--alt{ background: #f7faf8; }
+.section + .section{ border-top: 1px solid #eef2ee; }
+
 .section__head{
   margin-bottom: 1.25rem;
 }
@@ -260,13 +260,14 @@ a:hover{ text-decoration: underline; }
 }
 .ba{ position: relative; overflow: hidden; }
 .ba__label{
-  position: absolute; top: .5rem; left: .5rem;
-  background: #111; color: #fff; font-weight: 700; font-size: .8rem;
-  padding: .25rem .5rem; border-radius: 6px;
+  background: #0f172a; /* slate-900 */
+  box-shadow: 0 6px 18px rgba(0,0,0,.18);
+  letter-spacing:.2px;
 }
 .ba__label--after{
-  left: auto; right: .5rem; background: var(--success);
+  background: var(--primary);
 }
+
 
 /* =========================
    Pricing
@@ -277,8 +278,13 @@ a:hover{ text-decoration: underline; }
 .plan{ padding: 1.25rem; }
 .plan__bullets{ margin: .5rem 0 1rem; padding-left: 1.2rem; }
 .plan--featured{
-  border: 2px solid var(--secondary);
-  box-shadow: var(--shadow);
+  border: 2px solid var(--primary);
+  box-shadow: 0 16px 40px rgba(20,83,45,.15);
+  transform: translateY(-2px);
+}
+.plan--featured .chip--accent{
+  background: color-mix(in oklab, var(--secondary) 25%, #fff);
+  border-color: color-mix(in oklab, var(--secondary) 55%, #ddd);
 }
 
 /* =========================
@@ -335,10 +341,10 @@ input:focus, select:focus, textarea:focus{
    Footer
    ========================= */
 .footer{
-  background: #0e1210;
-  color: #dbe7dd;
-  padding-top: 2.25rem;
+  background: linear-gradient(180deg, #0b1610 0%, #0e1210 100%);
+  border-top: 3px solid color-mix(in oklab, var(--secondary) 35%, #0e1210);
 }
+
 .footer a{ color: #e6fff0; }
 .footer__grid{
   display: grid; gap: 1rem;
