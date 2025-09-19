@@ -737,25 +737,26 @@
 
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer__grid">
-      <div class="footer__col">
-        <h3 class="brand__name">{{BUSINESS_NAME}}</h3>
-        <p>Licensed &amp; Insured • Serving {{CITY}} and surrounding areas.</p>
-        <p class="footer__disclaimer">Disclaimer: This website may contain placeholders. All work quoted after on-site assessment.</p>
+ <!-- FOOTER — v2 (overwrite) -->
+<footer class="footer footer--v2" role="contentinfo">
+  <div class="container footer__top">
+    <div class="f-brand">
+      <div class="f-logo" aria-hidden="true">🌿</div>
+      <div class="f-brand__text">
+        <h3 class="f-name">{{BUSINESS_NAME}}</h3>
+        <p class="f-tag">Licensed &amp; Insured • Serving {{CITY}} and nearby communities.</p>
+        <div class="f-chips" aria-label="Trust badges">
+          <span class="f-chip">Insured</span>
+          <span class="f-chip">5-Star Rated</span>
+          <span class="f-chip">Satisfaction Guaranteed</span>
+        </div>
       </div>
-      <div class="footer__col">
-        <h4>Contact</h4>
-        <ul class="footer__list">
-          <li><a href="tel:{{PHONE}}">{{PHONE}}</a></li>
-          <li><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
-          <li>{{ADDRESS}}</li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h4>Quick Links</h4>
-        <ul class="footer__list">
+    </div>
+
+    <nav class="f-links" aria-label="Footer">
+      <div class="f-col">
+        <h4>Explore</h4>
+        <ul>
           <li><a href="#services">Services</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="#reviews">Reviews</a></li>
@@ -763,24 +764,59 @@
           <li><a href="#quote">Get a Quote</a></li>
         </ul>
       </div>
-      <div class="footer__col">
-        <h4>Hours</h4>
-        <ul class="footer__list">
+      <div class="f-col">
+        <h4>Contact</h4>
+        <ul class="f-contact">
+          <li><a href="tel:{{PHONE}}">{{PHONE}}</a></li>
+          <li><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+          <li>{{ADDRESS}}</li>
           <li>Mon–Sat: 8am–6pm</li>
-          <li>Sun: Closed</li>
         </ul>
       </div>
-    </div>
-    <div class="container footer__bottom">
-      <p>&copy; <span id="year"></span> {{BUSINESS_NAME}}. All rights reserved.</p>
-    </div>
-  </footer>
+      <div class="f-col">
+        <h4>Follow</h4>
+        <div class="f-social">
+          <a href="#" aria-label="Facebook" title="Facebook" class="f-social__btn">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M13 10h3l-1 4h-2v8h-4v-8H7v-4h2V8a4 4 0 0 1 4-4h3v4h-3a1 1 0 0 0-1 1v1z" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" title="Instagram" class="f-social__btn">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.75a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z" fill="currentColor"/></svg>
+          </a>
+        </div>
 
-  <!-- Mobile bottom bar -->
-  <div class="mobile-cta" role="region" aria-label="Quick actions">
-    <a class="mobile-cta__btn" href="tel:{{PHONE}}" data-cta="bottom-call">Call</a>
-    <a class="mobile-cta__btn mobile-cta__btn--primary" href="#quote">Get a Quote</a>
+        <div class="f-cta">
+          <a class="btn btn-primary" href="#quote">Get a Quote</a>
+          <a class="btn btn-ghost" href="tel:{{PHONE}}">Call {{PHONE}}</a>
+        </div>
+      </div>
+    </nav>
   </div>
+
+  <div class="container footer__meta">
+    <p class="f-disclaimer">Disclaimer: This website may include placeholders. Final pricing provided after on-site assessment.</p>
+    <div class="f-legal">
+      <p>&copy; <span id="year"></span> {{BUSINESS_NAME}}. All rights reserved.</p>
+      <ul class="f-legal__links">
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#home">Back to top</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile bottom bar — v2 (keeps same class for existing JS) -->
+<div class="mobile-cta" role="region" aria-label="Quick actions">
+  <a class="mobile-cta__btn" href="tel:{{PHONE}}" data-cta="bottom-call">
+    <span class="mobile-cta__icon" aria-hidden="true">📞</span>
+    Call
+  </a>
+  <a class="mobile-cta__btn mobile-cta__btn--primary" href="#quote">
+    <span class="mobile-cta__icon" aria-hidden="true">📝</span>
+    Get a Quote
+  </a>
+</div>
+
 
   <!-- JSON-LD -->
   <script type="application/ld+json">
